@@ -34,13 +34,12 @@ func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
 
 
-
-
 func _on_bubble_body_entered(body):
 	if  "Enemy" in body.name:
 		body.dead()
-		get_node("Sprite/AnimationPlayer").play("trap")
 		is_trap = true
+		$Sprite.scale = Vector2(1, 1)
+		$Sprite.texture = body.trapped_sprite
 	if  "player" in body.name:
 		PlayerData.score += score
 		queue_free()

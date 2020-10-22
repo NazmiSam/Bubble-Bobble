@@ -4,6 +4,7 @@ var velocity = Vector2()
 var direction = -1
 var hp = 1
 var is_dead = false
+var trapped_sprite = preload("res://Alien sprites/alienPink_badge2.png")
 #var TRAP = preload("res://trappedEnemy.tscn")
 
 func _ready():
