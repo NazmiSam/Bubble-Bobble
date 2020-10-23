@@ -195,13 +195,15 @@ position = Vector2( 176, 102 )
 
 [node name="enemyStopper" type="StaticBody2D" parent="."]
 collision_layer = 64
-collision_mask = 129
+collision_mask = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enemyStopper"]
 position = Vector2( 132.936, 436.992 )
 shape = SubResource( 8 )
 
 [node name="enemyStopper2" type="StaticBody2D" parent="."]
+collision_layer = 64
+collision_mask = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enemyStopper2"]
 position = Vector2( 917.825, 438.406 )

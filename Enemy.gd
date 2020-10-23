@@ -34,6 +34,10 @@ func _physics_process(delta):
 
 	velocity = move_and_slide(velocity, Vector2.UP)
 
-
+	if get_slide_count() > 0:
+			for i in range(get_slide_count()):
+				if "player" in get_slide_collision(i).collider.name:
+					get_slide_collision(i).collider.dead()
+					
 func _on_Timer_timeout():
 	queue_free()
